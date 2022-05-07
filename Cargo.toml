@@ -1,0 +1,11 @@
+[package]
+name = "wealthy"
+version = "0.1.0"
+edition = "2021"
+description = "[Rich](https://github.com/Textualize/rich) ported to Rust!"
+repository = "https://github.com/wizard-28/wealthy"
+license = "GPL-3.0-or-later"
+keywords = ["color", "rich", "port", "term", "cli"]
+categories = ["command-line-interface"]
+
+[dependencies]
