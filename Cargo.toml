@@ -1,6 +1,7 @@
 [package]
 name = "wealthy"
 version = "0.1.0"
+authors = ["wizard-28 <wiz28@protonmail.com>"]
 edition = "2021"
 description = "[Rich](https://github.com/Textualize/rich) ported to Rust!"
 repository = "https://github.com/wizard-28/wealthy"
