@@ -3,9 +3,7 @@
 [![Crates.io](https://img.shields.io/crates/v/wealthy.svg)](https://crates.io/crates/wealthy)
 [![Docs.rs](https://docs.rs/wealthy/badge.svg)](https://docs.rs/wealthy)
 [![CI](https://github.com/wizard-28/wealthy/workflows/CI/badge.svg)](https://github.com/wizard-28/wealthy/actions)
-<!-- [![Coverage
-Status](https://coveralls.io/repos/github/wizard-28/wealthy/badge.svg?branch=master)](https://coveralls.io/github/wizard-28/wealthy?branch=master)
--->
+[![Coverage Status](https://codecov.io/gh/wizard-28/wealthy/branch/master/graph/badge.svg?token=jvzyVUwTrL)](https://codecov.io/gh/wizard-28/wealthy)
 
 [Rich](https://github.com/Textualize/rich) ported to Rust!
 
