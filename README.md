@@ -1,15 +1,52 @@
-# Wealthy
+<h1 align="center">Wealthy</h1>
+<p align="center">
+  <a href="https://crates.io/crates/wealthy"><img alt="Crates.io"
+  src="https://img.shields.io/crates/v/wealthy?style=for-the-badge"></a>
+  <a href="https://github.com/wizard-28/wealthy/actions"><img alt="CI"
+  src="https://img.shields.io/github/workflow/status/wizard-28/wealthy/CI?label=CI&logo=github&style=for-the-badge"></a>
+  <a href="https://codecov.io/gh/wizard-28/wealthy"><img alt="Codecov"
+  src="https://img.shields.io/codecov/c/gh/wizard-28/wealthy?logo=codecov&logoColor=white&style=for-the-badge&token=jvzyVUwTrL"></a>
+  <a href="https://docs.rs/wealthy"><img alt="docs.rs"
+  src="https://img.shields.io/docsrs/wealthy?logo=docs.rs&style=for-the-badge"></a>
+</p>
 
-[![Crates.io](https://img.shields.io/crates/v/wealthy.svg)](https://crates.io/crates/wealthy)
-[![Docs.rs](https://docs.rs/wealthy/badge.svg)](https://docs.rs/wealthy)
-[![CI](https://github.com/wizard-28/wealthy/workflows/CI/badge.svg)](https://github.com/wizard-28/wealthy/actions)
-[![Coverage Status](https://codecov.io/gh/wizard-28/wealthy/branch/master/graph/badge.svg?token=jvzyVUwTrL)](https://codecov.io/gh/wizard-28/wealthy)
+## What is this?
 
-[Rich](https://github.com/Textualize/rich) ported to Rust!
+Wealthy [Rich](https://github.com/Textualize/rich) ported to Rust! This aims to
+be a crate for *rich* text and beautiful formatting in the terminal.
+
+## Stats
+<p align="center"><img alt="Repobeats analytics image" src="https://repobeats.axiom.co/api/embed/40800b22875fe050c8af844d193f7c1e61109a3a.svg"></p>
 
 ## License
 
-Licensed under [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.en.html).
+<p align="center"><img alt="GPL-3.0-or-later" height="100" src="https://www.gnu.org/graphics/gplv3-or-later.svg" /></p>
+
+```monospace
+ _       __           ____  __
+| |     / /__  ____ _/ / /_/ /_  __  __
+| | /| / / _ \/ __ `/ / __/ __ \/ / / /
+| |/ |/ /  __/ /_/ / / /_/ / / / /_/ /
+|__/|__/\___/\__,_/_/\__/_/ /_/\__, /
+                              /____/
+
+Copyright (C) 2022-present
+
+This file is part of Wealthy
+
+Wealthy is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Wealthy is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Wealthy. If not, see <https://www.gnu.org/licenses/>.
+```
 
 ## Contribution
 
