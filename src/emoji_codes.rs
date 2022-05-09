@@ -2,8 +2,8 @@ use std::collections::HashMap;
 
 use lazy_static::lazy_static;
 
-/// Hashmap to store emoji-text::emoji mappings.
 lazy_static! {
+    /// Hashmap to store emoji-text::emoji mappings.
     pub(crate) static ref EMOJI: HashMap<&'static str, &'static str> = HashMap::from([
         ("1st_place_medal", "🥇"),
         ("2nd_place_medal", "🥈"),

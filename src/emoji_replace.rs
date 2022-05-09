@@ -5,8 +5,8 @@ use regex::{Captures, Regex};
 
 use crate::emoji_codes;
 
-#[allow(dead_code)]
 /// Replace emoji code in text.
+#[allow(dead_code)]
 fn emoji_replace<'a>(
     text: &'a str,
     default_variant: Option<&str>,
