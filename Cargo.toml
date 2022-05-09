@@ -10,3 +10,5 @@ keywords = ["color", "rich", "port", "term", "cli"]
 categories = ["command-line-interface"]
 
 [dependencies]
+lazy_static = "1.4.0"
+regex = "1.5.5"
