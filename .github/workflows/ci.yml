@@ -122,8 +122,6 @@ jobs:
         with:
           args: '--all-features --workspace'
       - name: Upload to CodeCov
-        # upload only if push
-        if: ${{ github.event_name == 'push' }}
         uses: codecov/codecov-action@v1.0.2
         with:
          token: ${{secrets.CODECOV_TOKEN}}
