@@ -18,7 +18,7 @@ setup-dev:
     @echo Development environment installed successfully!
 
 # Run checks
-check: fmt clippy test
+check: spellcheck fmt clippy test
     @echo Checks were successful!
 
 clean:
@@ -51,4 +51,4 @@ fmt +ARGS="":
 # Spellcheck the codebase
 spellcheck +ARGS="--skip target*":
     @codespell --write-changes --builtin clear,rare,informal,code --ignore-words-list crate,womens {{ARGS}}
-    @echo Looks good!
+    @echo Spellings look good!
