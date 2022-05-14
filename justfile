@@ -11,6 +11,10 @@ setup-dev:
     @pre-commit install
     @echo \`pre-commit\` hooks successfully installed!
 
+    @echo Installing \`codespell\`
+    @pip install codespell
+    @echo \`codespell\` successfully installed!
+
     @echo Development environment installed successfully!
 
 # Run checks
