@@ -44,6 +44,11 @@ clippy:
     @echo Lint successful!
 
 # Format the codebase
-fmt:
-    @cargo +nightly fmt --all
+fmt +ARGS="":
+    @cargo +nightly fmt --all -- {{ARGS}}
     @echo Codebase formatted successfully!
+
+# Spellcheck the codebase
+spellcheck +ARGS="--skip target*":
+    @codespell --write-changes --builtin clear,rare,informal,code --ignore-words-list crate,womens {{ARGS}}
+    @echo Looks good!
