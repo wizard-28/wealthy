@@ -40,7 +40,7 @@ test +ARGS="":
 
 # Lint the codebase
 clippy +ARGS="":
-    @cargo clippy --all-targets --all-features --workspace -- --deny clippy::pedantic {{ARGS}}
+    @cargo clippy --all-targets --all-features --workspace -- --deny warnings --deny clippy::pedantic {{ARGS}}
     @echo Lint successful!
 
 # Format the codebase
