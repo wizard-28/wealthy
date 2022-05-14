@@ -4,6 +4,13 @@
 setup-dev:
     @echo Installing nightly \`rustfmt\`
     @rustup toolchain install nightly --component rustfmt
+    @echo Nightly \`rustfmt\` successfully installed!
+
+    @echo Installing \`pre-commit\`
+    @pip install pre-commit
+    @pre-commit install
+    @echo \`pre-commit\` hooks successfully installed!
+
     @echo Development environment installed successfully!
 
 # Run checks
