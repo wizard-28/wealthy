@@ -21,12 +21,9 @@ setup-dev:
 check: spellcheck fmt clippy test
     @echo Checks were successful!
 
+# Remove generated artifacts
 clean:
     @cargo clean
-    @echo Done!
-
-distclean:
-    @rm --recursive --force .cargo target
     @echo Done!
 
 # Build the project
