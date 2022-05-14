@@ -12,3 +12,6 @@ categories = ["command-line-interface"]
 [dependencies]
 lazy_static = "1.4.0"
 regex = "1.5.5"
+
+[dev-dependencies]
+rstest = "0.12.0"
