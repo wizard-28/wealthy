@@ -32,3 +32,4 @@ repos:
         language: system
         entry: just clippy
         types: [rust]
+        pass_filenames: false
