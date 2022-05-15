@@ -56,7 +56,7 @@ jobs:
         uses: codespell-project/actions-codespell@master
         with:
           builtin: clear,rare,informal,code
-          ignore_words_list: crate,womens
+          ignore_words_file: .codespellignore
 
   clippy:
     name: Clippy
