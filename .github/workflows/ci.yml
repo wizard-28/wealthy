@@ -46,6 +46,18 @@ jobs:
           command: fmt
           args: --all -- --check
 
+  spellcheck:
+    name: Spellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Spellcheck
+        uses: codespell-project/actions-codespell@master
+        with:
+          builtin: clear,rare,informal,code
+          ignore_words_list: crate,womens
+
   clippy:
     name: Clippy
     runs-on: ubuntu-latest
