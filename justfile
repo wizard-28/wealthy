@@ -47,5 +47,5 @@ fmt +ARGS="":
 
 # Spellcheck the codebase
 spellcheck +ARGS="--skip target*":
-    @codespell --write-changes --builtin clear,rare,informal,code --ignore-words-list crate,womens {{ARGS}}
+    @codespell --write-changes --builtin clear,rare,informal,code -I .codespellignore {{ARGS}}
     @echo Spellings look good!
