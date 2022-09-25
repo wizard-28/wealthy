@@ -192,7 +192,7 @@ fn ratio_reduce(total: i32, ratios: &[i32], maximums: &[i32], values: Vec<i32>) 
 ///
 /// # Returns
 ///
-/// A vector of integers gauranteed to sum to total.
+/// A vector of integers guaranteed to sum to total.
 #[allow(clippy::cast_precision_loss)]
 #[allow(clippy::cast_possible_truncation)]
 fn ratio_distribute(total: i32, ratios: Vec<i32>, minimums: Option<Vec<i32>>) -> Vec<i32> {
@@ -228,60 +228,60 @@ fn ratio_distribute(total: i32, ratios: Vec<i32>, minimums: Option<Vec<i32>>) ->
 
 #[cfg(test)]
 mod tests {
-    use rstest::*;
+    use rstest::rstest;
 
     use super::*;
 
     #[rstest]
-    #[case(100, &Vec::<Edge>::new(), vec![])]
-    #[case(100, &vec![Edge { size: Some(100), ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], vec![100, 1])]
-    #[case(100, &vec![Edge { ratio: 1, ..Edge::default() }], vec![100])]
-    #[case(100, &vec![Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], vec![50, 50])]
-    #[case(100, &vec![Edge { size: Some(20), ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], vec![20, 40, 40])]
-    #[case(100, &vec![Edge { size: Some(40), ..Edge::default() }, Edge { ratio: 2, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], vec![40, 40, 20])]
-    #[case(100, &vec![Edge { size: Some(40), ..Edge::default() }, Edge { ratio: 2, ..Edge::default() }, Edge { ratio: 1, minimum_size: 25, ..Edge::default() }], vec![40, 35, 25])]
-    #[case(100, &vec![Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], vec![33, 33, 34])]
-    #[case(50, &vec![Edge { size: Some(30), ..Edge::default() }, Edge { ratio: 1, minimum_size: 10, ..Edge::default() }, Edge { size: Some(30), ..Edge::default() }], vec![30, 10, 30])]
-    #[case(110, &vec![Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], vec![36, 37, 37])]
-    #[case(50, &vec![Edge { size: Some(30), ..Edge::default() }, Edge { ratio: 1, minimum_size: 0, ..Edge::default() }, Edge { size: Some(30), ..Edge::default() }], vec![30, 1, 30])]
+    #[case(100, &Vec::<Edge>::new(), &vec![])]
+    #[case(100, &vec![Edge { size: Some(100), ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], &vec![100, 1])]
+    #[case(100, &vec![Edge { ratio: 1, ..Edge::default() }], &vec![100])]
+    #[case(100, &vec![Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], &vec![50, 50])]
+    #[case(100, &vec![Edge { size: Some(20), ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], &vec![20, 40, 40])]
+    #[case(100, &vec![Edge { size: Some(40), ..Edge::default() }, Edge { ratio: 2, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], &vec![40, 40, 20])]
+    #[case(100, &vec![Edge { size: Some(40), ..Edge::default() }, Edge { ratio: 2, ..Edge::default() }, Edge { ratio: 1, minimum_size: 25, ..Edge::default() }], &vec![40, 35, 25])]
+    #[case(100, &vec![Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], &vec![33, 33, 34])]
+    #[case(50, &vec![Edge { size: Some(30), ..Edge::default() }, Edge { ratio: 1, minimum_size: 10, ..Edge::default() }, Edge { size: Some(30), ..Edge::default() }], &vec![30, 10, 30])]
+    #[case(110, &vec![Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }, Edge { ratio: 1, ..Edge::default() }], &vec![36, 37, 37])]
+    #[case(50, &vec![Edge { size: Some(30), ..Edge::default() }, Edge { ratio: 1, minimum_size: 0, ..Edge::default() }, Edge { size: Some(30), ..Edge::default() }], &vec![30, 1, 30])]
     fn test_ratio_resolve<E: HasEdge>(
         #[case] total: u32,
         #[case] edges: &[E],
-        #[case] result: Vec<u32>,
+        #[case] result: &[u32],
     ) {
         assert_eq!(ratio_resolve(total, edges), result);
     }
 
     #[rstest]
-    #[case(20, &vec![2, 4], &vec![20, 20], vec![5, 5], vec![-2, -8])]
-    #[case(20, &vec![2, 4], &vec![1, 1], vec![5, 5], vec![4, 4])]
-    #[case(20, &vec![2, 4], &vec![1, 1], vec![2, 2], vec![1, 1])]
-    #[case(3, &vec![2, 4], &vec![3, 3], vec![2, 2], vec![1, 0])]
-    #[case(3, &vec![2, 4], &vec![3, 3], vec![0, 0], vec![-1, -2])]
-    #[case(3, &vec![0, 0], &vec![3, 3], vec![4, 4], vec![4, 4])]
-    #[case(3, &vec![5, -6], &vec![3, 3], vec![5, 5], vec![5, 5])]
+    #[case(20, &vec![2, 4], &vec![20, 20], vec![5, 5], &vec![-2, -8])]
+    #[case(20, &vec![2, 4], &vec![1, 1], vec![5, 5], &vec![4, 4])]
+    #[case(20, &vec![2, 4], &vec![1, 1], vec![2, 2], &vec![1, 1])]
+    #[case(3, &vec![2, 4], &vec![3, 3], vec![2, 2], &vec![1, 0])]
+    #[case(3, &vec![2, 4], &vec![3, 3], vec![0, 0], &vec![-1, -2])]
+    #[case(3, &vec![0, 0], &vec![3, 3], vec![4, 4], &vec![4, 4])]
+    #[case(3, &vec![5, -6], &vec![3, 3], vec![5, 5], &vec![5, 5])]
     fn test_ratio_reduce(
         #[case] total: i32,
         #[case] ratios: &[i32],
         #[case] maximums: &[i32],
         #[case] values: Vec<i32>,
-        #[case] result: Vec<i32>,
+        #[case] result: &[i32],
     ) {
         assert_eq!(ratio_reduce(total, ratios, maximums, values), result);
     }
 
     #[rstest]
-    #[case(10, vec![1], None, vec![10])]
-    #[case(10, vec![1, 1], None, vec![5, 5])]
-    #[case(12, vec![1, 3], None, vec![3, 9])]
-    #[case(0, vec![1, 3], None, vec![0, 0])]
-    #[case(0, vec![1, 3], Some(vec![1, 1]), vec![1, 1])]
-    #[case(10, vec![1, 0], None, vec![10, 0])]
+    #[case(10, vec![1], None, &vec![10])]
+    #[case(10, vec![1, 1], None, &vec![5, 5])]
+    #[case(12, vec![1, 3], None, &vec![3, 9])]
+    #[case(0, vec![1, 3], None, &vec![0, 0])]
+    #[case(0, vec![1, 3], Some(vec![1, 1]), &vec![1, 1])]
+    #[case(10, vec![1, 0], None, &vec![10, 0])]
     fn test_ratio_distribute(
         #[case] total: i32,
         #[case] ratios: Vec<i32>,
         #[case] minimums: Option<Vec<i32>>,
-        #[case] result: Vec<i32>,
+        #[case] result: &[i32],
     ) {
         assert_eq!(ratio_distribute(total, ratios, minimums), result);
     }
