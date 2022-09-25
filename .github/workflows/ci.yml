@@ -135,6 +135,6 @@ jobs:
         with:
           args: '--all-features --workspace --ignore-tests'
       - name: Upload to CodeCov
-        uses: codecov/codecov-action@v3.1.0
+        uses: codecov/codecov-action@v3.1.1
         with:
          token: ${{secrets.CODECOV_TOKEN}}
