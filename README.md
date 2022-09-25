@@ -8,6 +8,13 @@
   src="https://img.shields.io/codecov/c/gh/wizard-28/wealthy?logo=codecov&logoColor=white&style=for-the-badge&token=jvzyVUwTrL"></a>
   <a href="https://docs.rs/wealthy"><img alt="docs.rs"
   src="https://img.shields.io/docsrs/wealthy?logo=docs.rs&style=for-the-badge"></a>
+  <br/>
+  <a href="https://discord.gg/6zUyxEBVJJ"><img alt="Join Discord server"
+  src="https://img.shields.io/discord/980699803077984286?color=%235865f2&label=discord&logo=discord&logoColor=white&style=for-the-badge"></a>
+  <a href="https://app.revolt.chat/invite/YShCacpX"><img alt="Join Revolt server"
+  src="https://img.shields.io/badge/dynamic/json?label=Revolt&query=member_count&suffix=%20members&url=https%3A%2F%2Fapi.revolt.chat%2Finvites%2FYShCacpX&style=for-the-badge&color=ff4654"></a>
+  <a href="https://matrix.to/#/#wealthy:matrix.org"><img alt="Join Matrix space"
+  src="https://img.shields.io/matrix/wealthy:matrix.org?color=white&label=Matrix&logo=matrix&style=for-the-badge"></a>
 </p>
 
 ## What is this?

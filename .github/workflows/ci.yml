@@ -34,7 +34,7 @@ jobs:
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: stable
+          toolchain: nightly
           profile: minimal
           override: true
           components: rustfmt
@@ -42,8 +42,21 @@ jobs:
       - name: Check formatting
         uses: actions-rs/cargo@v1
         with:
+          toolchain: nightly
           command: fmt
           args: --all -- --check
+
+  spellcheck:
+    name: Spellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Spellcheck
+        uses: codespell-project/actions-codespell@master
+        with:
+          builtin: clear,rare,informal,code
+          ignore_words_file: .codespellignore
 
   clippy:
     name: Clippy
@@ -63,7 +76,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: --all-targets --all-features --workspace -- -D warnings
+          args: --all-targets --all-features --workspace -- -D warnings -D clippy::pedantic
 
   docs:
     name: Docs

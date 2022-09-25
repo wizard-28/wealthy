@@ -45,36 +45,71 @@ If the required subsection does not exist yet under **Unreleased**, create it!
 
 ### Set up
 
-This is no different than other Rust projects.
+First fork the project, and clone your fork to your machine.
+
+You'll need to install [Just](https://github.com/casey/just#installationt)
+next. Think of it like the `make` command.
+
+After you've installed Just, run the following command to setup your
+development environment:
 
 ```shell
-git clone https://github.com/wizard-28/wealthy
-cd wealthy
-cargo test
+just # or `just setup-dev`
+```
+
+That will install the following development tools to your machine:
+
+* Nightly `rustfmt` for formatting the code in the project.
+* `pre-commit` for pre-commit hooks, which run before you commit to make sure
+  that your commit is up to standards.
+* `codespell` for spell checking.
+
+Then run the tests to verify that your development environment is setup correctly.
+
+```shell
+just test
 ```
 
 ### Useful Commands
 
-- Run Clippy:
+- List all Just recipes:
 
   ```shell
-  cargo clippy --all-targets --all-features --workspace
+  just -l
   ```
 
-- Run all tests:
+- Build the project
 
   ```shell
-  cargo test --all-features --workspace
+  just build
   ```
 
-- Check to see if there are code formatting issues
+- Run all checks (`spellcheck`, `clippy`, `test`, `fmt`):
 
   ```shell
-  cargo fmt --all -- --check
+  just check
   ```
 
-- Format the code in the project
+  - Run the spell checker:
 
-  ```shell
-  cargo fmt --all
-  ```
+    ```shell
+    just spellcheck
+    ```
+
+  - Run Clippy:
+
+    ```shell
+    just clippy
+    ```
+
+  - Run all tests:
+
+    ```shell
+    just test
+    ```
+
+  - Format the code in the project
+
+    ```shell
+    just fmt
+    ```

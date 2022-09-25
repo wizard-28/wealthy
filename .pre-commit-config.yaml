@@ -1,0 +1,34 @@
+repos:
+  # General
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: codespell
+        name: Check for misspellings
+        description: Checks for common misspellings in text files
+        language: system
+        entry: just spellcheck
+        types: [text]
+      - id: fmt
+        name: Format files
+        description: Format files with cargo fmt
+        language: system
+        entry: just fmt
+        types: [rust]
+      - id: clippy
+        name: Lint code
+        description: Lint rust sources
+        language: system
+        entry: just clippy
+        types: [rust]
+        pass_filenames: false
