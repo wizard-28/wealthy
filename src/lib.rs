@@ -10,3 +10,7 @@ mod region;
 
 pub mod cells;
 pub mod color_triplet;
+// TODO: Re-export it as wealthy::progress::Spinners;
+pub mod spinners;
+
+pub use spinners::names as Spinners;
