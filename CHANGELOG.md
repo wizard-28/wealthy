@@ -17,3 +17,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Port `region.py` (`region.rs`) in [#80](https://github.com/wizard-28/wealthy/pull/80) from [@wizard-28](https://github.com/wizard-28)
 - Port `filesize.py` (`filesize.rs`) in [#83](https://github.com/wizard-28/wealthy/pull/83) from [@wizard-28](https://github.com/wizard-28)
 - Port `cells.py` (`cells.rs`) in [#83](https://github.com/wizard-28/wealthy/pull/89) from [@wizard-28](https://github.com/wizard-28)
+- Port `_spinners.py` (`spinners.py`) in [#83](https://github.com/wizard-28/wealthy/pull/89) from [@wizard-28](https://github.com/wizard-28). More spinners have been added from the [spinners](https://crates.io/crates/spinners) crate.
