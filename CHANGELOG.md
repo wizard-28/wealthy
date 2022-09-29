@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2022-09-29
+
 ### Added
 
 - Port `_emoji_codes.py` (`emoji_codes.rs`) in [#64](https://github.com/wizard-28/wealthy/pull/64) from [@wizard-28](https://github.com/wizard-28)
