@@ -11,6 +11,7 @@ mod region;
 
 pub mod cells;
 pub mod color_triplet;
+pub mod measure;
 pub mod palette;
 // TODO: Re-export it as wealthy::progress::Spinners;
 pub mod spinners;
