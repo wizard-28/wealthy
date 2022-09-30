@@ -1,17 +1,36 @@
 /// The red, green, and blue components of a color.
-///
-/// # Fields
-///
-/// * `red` - Red component of the color.
-/// * `green` - Green component of the color.
-/// * `blue` - Blue component of the color.
+#[derive(Debug, Eq, PartialEq, Hash)]
 pub struct ColorTriplet {
+    /// Red component of the color.
     pub red: u8,
+    /// Green component of the color.
     pub green: u8,
+    /// Blue component of the color.
     pub blue: u8,
 }
 
 impl ColorTriplet {
+    /// Instantiate a new `ColorTriplet`
+    ///
+    /// # Arguments
+    ///
+    /// * `red` - Red component of the color.
+    /// * `green` - Green component of the color.
+    /// * `blue` - Blue component of the color.
+    ///
+    /// # Returns
+    ///
+    /// A new `ColorTriplet`.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// use wealthy::color_triplet::ColorTriplet;
+    ///
+    /// let colors = ColorTriplet::new(100, 150, 200);
+    /// ```
+    pub const fn new(red: u8, green: u8, blue: u8) -> Self { Self { red, green, blue } }
+
     /// Get the color triplet in CSS style.
     ///
     /// # Returns
@@ -23,11 +42,7 @@ impl ColorTriplet {
     /// ```
     /// use wealthy::color_triplet::ColorTriplet;
     ///
-    /// let color_triplet = ColorTriplet {
-    ///     red: 100,
-    ///     green: 150,
-    ///     blue: 200,
-    /// };
+    /// let color_triplet = ColorTriplet::new(100, 150, 200);
     ///
     /// assert_eq!(color_triplet.hex(), "#6496c8");
     /// ```
@@ -45,11 +60,7 @@ impl ColorTriplet {
     /// ```
     /// use wealthy::color_triplet::ColorTriplet;
     ///
-    /// let color_triplet = ColorTriplet {
-    ///     red: 100,
-    ///     green: 150,
-    ///     blue: 200,
-    /// };
+    /// let color_triplet = ColorTriplet::new(100, 150, 200);
     ///
     /// assert_eq!(color_triplet.rgb(), "rgb(100,150,200)");
     /// ```
@@ -67,11 +78,7 @@ impl ColorTriplet {
     /// ```
     /// use wealthy::color_triplet::ColorTriplet;
     ///
-    /// let color_triplet = ColorTriplet {
-    ///     red: 100,
-    ///     green: 150,
-    ///     blue: 200,
-    /// };
+    /// let color_triplet = ColorTriplet::new(100, 150, 200);
     ///
     /// assert_eq!(
     ///     color_triplet.normalized(),
@@ -95,22 +102,22 @@ mod tests {
     use super::*;
 
     #[rstest]
-    #[case(&ColorTriplet { red: 255, green: 255, blue: 255}, "#ffffff")]
-    #[case(&ColorTriplet { red: 0, green: 255, blue: 0}, "#00ff00")]
+    #[case(&ColorTriplet::new(255, 255, 255), "#ffffff")]
+    #[case(&ColorTriplet::new(0, 255, 0), "#00ff00")]
     fn test_hex(#[case] color_triplet: &ColorTriplet, #[case] result: &str) {
         assert_eq!(color_triplet.hex(), result);
     }
 
     #[rstest]
-    #[case(&ColorTriplet { red: 255, green: 255, blue: 255}, "rgb(255,255,255)")]
-    #[case(&ColorTriplet { red: 0, green: 255, blue: 0}, "rgb(0,255,0)")]
+    #[case(&ColorTriplet::new(255, 255, 255), "rgb(255,255,255)")]
+    #[case(&ColorTriplet::new(0, 255, 0), "rgb(0,255,0)")]
     fn test_rgb(#[case] color_triplet: &ColorTriplet, #[case] result: &str) {
         assert_eq!(color_triplet.rgb(), result);
     }
 
     #[rstest]
-    #[case(&ColorTriplet { red: 255, green: 255, blue: 255}, (1.0, 1.0, 1.0))]
-    #[case(&ColorTriplet { red: 0, green: 255, blue: 0}, (0.0, 1.0, 0.0))]
+    #[case(&ColorTriplet::new(255, 255, 255), (1.0, 1.0, 1.0))]
+    #[case(&ColorTriplet::new(0, 255, 0), (0.0, 1.0, 0.0))]
     fn test_normalized(#[case] color_triplet: &ColorTriplet, #[case] result: (f32, f32, f32)) {
         assert_eq!(color_triplet.normalized(), result);
     }
