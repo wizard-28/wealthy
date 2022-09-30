@@ -5,6 +5,7 @@ mod emoji_codes;
 mod emoji_replace;
 mod export_format;
 mod filesize;
+mod palettes;
 mod ratio;
 mod region;
 
