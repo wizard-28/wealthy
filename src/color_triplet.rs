@@ -1,13 +1,11 @@
 /// The red, green, and blue components of a color.
-///
-/// # Fields
-///
-/// * `red` - Red component of the color.
-/// * `green` - Green component of the color.
-/// * `blue` - Blue component of the color.
+#[derive(Debug, Eq, PartialEq, Hash)]
 pub struct ColorTriplet {
+    /// Red component of the color.
     pub red: u8,
+    /// Green component of the color.
     pub green: u8,
+    /// Blue component of the color.
     pub blue: u8,
 }
 
