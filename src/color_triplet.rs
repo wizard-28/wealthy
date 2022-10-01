@@ -1,92 +1,37 @@
+#![allow(dead_code)]
+
 /// The red, green, and blue components of a color.
-#[derive(Debug, Eq, PartialEq, Hash)]
-pub struct ColorTriplet {
+#[derive(Clone, Debug, Eq, PartialEq, Hash)]
+pub(crate) struct ColorTriplet {
     /// Red component of the color.
-    pub red: u8,
+    pub(crate) red: u8,
     /// Green component of the color.
-    pub green: u8,
+    pub(crate) green: u8,
     /// Blue component of the color.
-    pub blue: u8,
+    pub(crate) blue: u8,
 }
 
 impl ColorTriplet {
-    /// Instantiate a new `ColorTriplet`
+    /// Instantiate a new [`ColorTriplet`].
     ///
     /// # Arguments
     ///
     /// * `red` - Red component of the color.
     /// * `green` - Green component of the color.
     /// * `blue` - Blue component of the color.
-    ///
-    /// # Returns
-    ///
-    /// A new `ColorTriplet`.
-    ///
-    /// # Examples
-    ///
-    /// ```
-    /// use wealthy::color_triplet::ColorTriplet;
-    ///
-    /// let colors = ColorTriplet::new(100, 150, 200);
-    /// ```
-    pub const fn new(red: u8, green: u8, blue: u8) -> Self { Self { red, green, blue } }
+    pub(crate) const fn new(red: u8, green: u8, blue: u8) -> Self { Self { red, green, blue } }
 
     /// Get the color triplet in CSS style.
-    ///
-    /// # Returns
-    ///
-    /// A `String` containing the color triplet in CSS style.
-    ///
-    /// # Examples
-    ///
-    /// ```
-    /// use wealthy::color_triplet::ColorTriplet;
-    ///
-    /// let color_triplet = ColorTriplet::new(100, 150, 200);
-    ///
-    /// assert_eq!(color_triplet.hex(), "#6496c8");
-    /// ```
-    #[must_use]
-    pub fn hex(&self) -> String { format!("#{:02x}{:02x}{:02x}", self.red, self.green, self.blue) }
+    pub(crate) fn hex(&self) -> String {
+        format!("#{:02x}{:02x}{:02x}", self.red, self.green, self.blue)
+    }
 
     /// Get the color triplet in RBG format.
-    ///
-    /// # Returns
-    ///
-    /// A `String` containing the color triplet in RGB format.
-    ///
-    /// # Examples
-    ///
-    /// ```
-    /// use wealthy::color_triplet::ColorTriplet;
-    ///
-    /// let color_triplet = ColorTriplet::new(100, 150, 200);
-    ///
-    /// assert_eq!(color_triplet.rgb(), "rgb(100,150,200)");
-    /// ```
-    #[must_use]
-    pub fn rgb(&self) -> String { format!("rgb({},{},{})", self.red, self.green, self.blue) }
+    pub(crate) fn rgb(&self) -> String { format!("rgb({},{},{})", self.red, self.green, self.blue) }
 
     /// Convert components into floats between 0 and 1.
-    ///
-    /// # Returns
-    ///
-    /// A `(f32, f32, f32)` of the color triplet components normalized.
-    ///
-    /// # Examples
-    ///
-    /// ```
-    /// use wealthy::color_triplet::ColorTriplet;
-    ///
-    /// let color_triplet = ColorTriplet::new(100, 150, 200);
-    ///
-    /// assert_eq!(
-    ///     color_triplet.normalized(),
-    ///     (0.39215687, 0.5882353, 0.78431374)
-    /// );
-    /// ```
     #[must_use]
-    pub fn normalized(&self) -> (f32, f32, f32) {
+    pub(crate) fn normalized(&self) -> (f32, f32, f32) {
         (
             f32::from(self.red) / 255.0,
             f32::from(self.green) / 255.0,
