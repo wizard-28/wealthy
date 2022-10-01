@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Port `__palettes.py` (`palettes.rs`) in [#94](https://github.com/wizard-28/wealthy/pull/94) from [@wizard-28](https://github.com/wizard-28)
 - Port `measure.py` (`measure.rs`) in [#95](https://github.com/wizard-28/wealthy/pull/95) from [@wizard-28](https://github.com/wizard-28)
 
+### Changed
+
+- BREAKING CHANGE: Private `color_triplet` and related modules in [#96](https://github.com/wizard-28/wealthy/pull/96) from [@wizard-28](https://github.com/wizard-28)
+
 ## [0.2.0] - 2022-09-29
 
 ### Added
