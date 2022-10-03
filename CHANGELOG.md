@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Port `palette.py` (`palette.rs`) in [#94](https://github.com/wizard-28/wealthy/pull/94) from [@wizard-28](https://github.com/wizard-28)
 - Port `__palettes.py` (`palettes.rs`) in [#94](https://github.com/wizard-28/wealthy/pull/94) from [@wizard-28](https://github.com/wizard-28)
 - Port `measure.py` (`measure.rs`) in [#95](https://github.com/wizard-28/wealthy/pull/95) from [@wizard-28](https://github.com/wizard-28)
+- Port `terminal_theme.py` (`terminal_theme.rs`) in [#97](https://github.com/wizard-28/wealthy/pull/97) from [@wizard-28](https://github.com/wizard-28). More themes have been added.
 
 ### Changed
 

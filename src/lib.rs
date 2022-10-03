@@ -10,6 +10,7 @@ mod palette;
 mod palettes;
 mod ratio;
 mod region;
+mod terminal_theme;
 
 pub mod cells;
 pub mod measure;
