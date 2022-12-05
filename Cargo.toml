@@ -21,4 +21,4 @@ separator = "0.4.1"
 unicode-segmentation = "1.10.0"
 
 [dev-dependencies]
-rstest = "0.15.0"
+rstest = "0.16.0"
