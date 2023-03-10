@@ -15,7 +15,7 @@ fraction = { version = "0.13.1", default-features = false }
 lazy_static = "1.4.0"
 lru = "0.10.0"
 maplit = "1.0.2"
-ordered-float = "3.1.0"
+ordered-float = "3.4.0"
 regex = "1.5.5"
 separator = "0.4.1"
 unicode-segmentation = "1.10.0"
