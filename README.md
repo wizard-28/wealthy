@@ -3,7 +3,7 @@
   <a href="https://crates.io/crates/wealthy"><img alt="Crates.io"
   src="https://img.shields.io/crates/v/wealthy?style=for-the-badge"></a>
   <a href="https://github.com/wizard-28/wealthy/actions"><img alt="CI"
-  src="https://img.shields.io/github/workflow/status/wizard-28/wealthy/CI?label=CI&logo=github&style=for-the-badge"></a>
+  src="https://img.shields.io/github/actions/workflow/status/wizard-28/wealthy/ci.yml?label=CI&logo=github&style=for-the-badge"></a>
   <a href="https://codecov.io/gh/wizard-28/wealthy"><img alt="Codecov"
   src="https://img.shields.io/codecov/c/gh/wizard-28/wealthy?logo=codecov&logoColor=white&style=for-the-badge&token=jvzyVUwTrL"></a>
   <a href="https://docs.rs/wealthy"><img alt="docs.rs"
