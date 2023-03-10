@@ -130,7 +130,7 @@ pub fn set_cell_size(text: String, total: u32) -> String {
     }
 
     if total == 0 {
-        return "".into();
+        return String::new();
     }
 
     let cell_size = cell_len(&text);

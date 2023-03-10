@@ -46,7 +46,7 @@ pub(crate) fn decimal(size: f32, precision: Option<usize>, separator: Option<&st
     let precision = precision.unwrap_or(1);
     let separator = separator.unwrap_or(" ");
 
-    let magnitude = format!("{:.precision$}", base as f32 * size as f32 / unit as f32)
+    let magnitude = format!("{:.precision$}", base * size / unit)
         .parse::<f32>()
         .unwrap();
 
@@ -56,10 +56,7 @@ pub(crate) fn decimal(size: f32, precision: Option<usize>, separator: Option<&st
         magnitude_separated_string.push_str(".0");
     }
 
-    format!(
-        "{}{separator}{evaluated_suffix}",
-        magnitude_separated_string
-    )
+    format!("{magnitude_separated_string}{separator}{evaluated_suffix}")
 }
 
 /// Pick a unit and suffix for the given size.
