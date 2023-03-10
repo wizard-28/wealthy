@@ -10,7 +10,7 @@ keywords = ["color", "rich", "port", "term", "cli"]
 categories = ["command-line-interface"]
 
 [dependencies]
-cached = "0.39.0"
+cached = "0.42.0"
 fraction = { version = "0.13.1", default-features = false }
 lazy_static = "1.4.0"
 lru = "0.10.0"
