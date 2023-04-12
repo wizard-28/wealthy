@@ -129,6 +129,6 @@ jobs:
       - name: Run cargo-tarpaulin
         run: cargo tarpaulin --verbose --all-features --workspace --ignore-tests --out Xml
       - name: Upload to CodeCov
-        uses: codecov/codecov-action@v3.1.1
+        uses: codecov/codecov-action@v3.1.2
         with:
           token: ${{secrets.CODECOV_TOKEN}}
